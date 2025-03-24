@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!-- form section -->
+<div class="col-md-12 mt-5">
+    <div class="white_shd full margin_bottom_30">
+       <div class="full graph_head">
+          <div class="heading1 margin_0">
+             <h2>Timetable Form</h2>
+          </div>
+       </div>
+       <div class="form_section padding_infor_info">
+          <div class="form-responsive-sm">
+                <form method="post">
+                {% csrf_token %}
+                 <!-- First Textbox -->
+                <div class="form-group">
+                  <label for="textbox1">Standard Id:</label>
+                  <select name="staid" id="">
+                    {% for i in std %}
+                       <option value="{{i.sta_id}}">{{i.sta_name}}</option>
+                    {% endfor %}
+                 </select>
+              </div>
+              <div class="form-group">
+                <label for="textbox1">Faculty Id:</label>
+                <select name="fid" id="">
+                    {% for i in fac %}
+                       <option value="{{i.f_id}}">{{i.f_name}}</option>
+                    {% endfor %}
+                 </select>
+            </div>
+            <div class="form-group">
+                <label for="textbox1">Subject Id:</label>
+                <select name="subid" id="" class="form-control">
+                    {% for i in sub %}
+                       <option value="{{i.sub_id}}">{{i.sub_name}}</option>
+                    {% endfor %}
+                 </select>
+            </div>
+              <!-- Second Textbox -->
+              <div class="form-group">
+                  <label for="textbox2">Days:</label>
+                  <select name="dofw" id="" class="form-control">
+                     <option value="Monday">Monday</option>
+                     <option value="Tuesday">Tueaday</option>
+               </select>
+              </div>
+              <div class="form-group">
+                <label for="textbox2">StratTime:</label>
+                <input type="time"  name="st" class="form-control" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="textbox2">EndTime:</label>
+                <input type="time"  name="et" class="form-control" value="" required>
+            </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+             </form>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- end form section -->
+{% endblock %}

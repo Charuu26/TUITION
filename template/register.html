@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .form-container {
+                background-color: #fff;
+                padding: 15px; /* Reduced padding */
+                border-radius: 6px; /* Reduced border-radius */
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Reduced shadow size */
+                width: 250px; /* Reduced width */
+            }
+            .form-container h2 {
+                margin-top: 0;
+                font-size: 20px; /* Reduced font size */
+            }
+            .form-container label {
+                display: block;
+                margin: 8px 0 4px; /* Reduced margin */
+                font-size: 14px; /* Reduced font size */
+            }
+            .form-container input[type="text"],
+            .form-container input[type="email"],
+            .form-container input[type="password"] {
+                width: 100%;
+                padding: 8px; /* Reduced padding */
+                border: 1px solid #ddd;
+                border-radius: 3px; /* Reduced border-radius */
+                margin-bottom: 12px; /* Reduced margin-bottom */
+                font-size: 14px; /* Reduced font size */
+            }
+            .form-container button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 8px; /* Reduced padding */
+                border: none;
+                border-radius: 3px; /* Reduced border-radius */
+                cursor: pointer;
+                width: 100%;
+                font-size: 14px; /* Reduced font size */
+            }
+            .form-container button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <h2>Register</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

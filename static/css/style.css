@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 5rem;
+    flex-shrink: 0;
+    min-height: 8vh;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Hero-sections */
+.hero-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    background-color: #dce5e2;
+    padding: 0 20px;
+    border-radius: 30px;
+}
+
+.hero-section .hero-left {
+    width: 50%;
+    padding: 20px;
+}
+
+.hero-left h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 1.2;
+    font-family: 'Readex Pro', serif;
+    color: #000000;
+}
+
+.hero-left p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.hero-left button {
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 14px 53px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 20px;
+}
+
+/* Hero-sections */
+
+
+/* Product-Section */
+.product-section {
+    margin: 3% auto;
+    Width: 85%;
+    Height: 1018px;
+    background-color: #ffffff;
+    padding: 28px;
+}
+
+.product-section .product-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.product-section p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(75, 75, 75, 1);
+    margin-top: 10px;
+}
+
+.product-heading h2 {
+    font-family: Readex Pro;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+/* Product-Section */
+
+
+/* Product-grid */
+.product-grid {
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas: "item-1 item-3 item-4"
+        "item-2 item-3 item-4";
+    gap: 20px;
+    padding: 20px;
+}
+
+.items {
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.15);
+}
+
+.item-1 {
+    grid-area: item-1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.item1-text {
+    text-align: right;
+}
+
+.item1-text h2 {
+    font-family: 'readex pro', serif;
+}
+
+.item1-text h5 {
+    font-family: 'inter', serif;
+}
+
+.item-2 {
+    grid-area: item-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-3 {
+    grid-area: item-3;
+    display: flex;
+    padding: 50px 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item3-text {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.item-4 {
+    grid-area: item-4;
+    display: flex;
+    padding: 100px 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item4-text {
+    text-align: center;
+    margin: 5% 0;
+}
+
+/* Product-grid */
+
+
+/* products-display */
+.products-display {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 0 20px;
+}
+
+.product-display-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.product-display-heading h2 {
+    font-family: Readex Pro;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.product-display-heading p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(75, 75, 75, 1);
+    margin-top: 10px;
+}
+
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 0 20px;
+    border-radius: 30px;
+}
+
+.product-text h2 {
+    font-family: Readex Pro;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 53px;
+}
+
+.product-text p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    color: rgba(75, 75, 75, 1);
+    margin-top: 10px;
+}
+
+.product-text h3 {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    margin-top: 12px;
+}
+
+/* products-display */
+
+/* product card */
+.product-cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin-top: 50px;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 0 20px;
+}
+
+.product-card-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+    display: grid;
+    margin-top: 30px;
+}
+
+.product-card-heading h2 {
+    font-family: Readex Pro;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.product-card-heading p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(75, 75, 75, 1);
+    margin-top: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+    background-color: #ffffff;
+}
+
+.card {
+    margin: 0 20px;
+    display: flex;
+    background-color: rgba(248, 249, 250, 1);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.card-heading {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.card-heading p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(75, 75, 75, 1);
+    margin-top: 10px;
+}
+
+.card-heading h2 {
+    font-family: 'Readex Pro', 'serif';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+}
+
+.card-heading button {
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 14px 53px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 20px;
+}
+
+/* product card */
+
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* footer */
+.footer-section {
+    width: 100%;
+    background-color: rgba(248, 249, 250, 1);
+}
+
+.footer {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px 25px;
+}
+
+.footer-item {
+    width: 25%;
+    padding: 0 20px;
+}
+
+.footer-item li {
+    list-style: none;
+    font-family: 'Inter', 'serif';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 20px;
+    color: rgba(75, 75, 75, 1);
+    margin-top: 10px;
+}
+
+.footer-item h3 {
+    font-family: 'Readex Pro', 'serif';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.footer-item:nth-child(1) {
+    padding: 8px 0;
+    width: 30%;
+}
+
+/* footer */
+
+
+/* ideas-section */
+.ideas-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin-top: 50px;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 0 20px;
+}
+
+.ideas-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+    display: grid;
+    margin-top: 30px;
+}
+
+.ideas {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 20px;
+    border-radius: 30px;
+}
+
+.ideas-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+
+}
+
+.ideas p {
+    font-family: 'Inter', 'serif';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 20px;
+    color: rgba(75, 75, 75, 1);
+}
+
+/* ideas-section */

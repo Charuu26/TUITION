@@ -1,0 +1,115 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!-- table section -->
+<div class="col-md-12 mt-5">
+    <div class="white_shd full margin_bottom_30">
+      {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+       <div class="full graph_head">
+          <div class="heading1 margin_0">
+             <h2>TimeTable</h2>
+          </div>
+       </div>
+       <div class="table_section padding_infor_info">
+          <div class="table-responsive-sm">
+            <a href="/addtimetable" class="btn btn-primary px-4 py-2">ADD</a>
+             <table class="table table-hover custom-table">
+                <thead>
+                   <tr>
+                      <th>Timetable Id</th>
+                      <th>Standard Id</th>
+                      <th>Faculty Id</th>
+                      <th>Subject Id</th>
+                      <th>Day Of Week</th>
+                      <th>Start Time</th>
+                      <th>End Time</th>
+                      <th>Student Id</th>
+                      <th>Action</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    {% for i in timetable %}
+                   <tr>
+                      <td>{{i.tt_id}}</td>
+                      <td>{{i.sta_id}}</td>
+                      <td>{{i.f_id}}</td>
+                      <td>{{i.sub_id}}</td>
+                      <td>{{i.day_of_week}}</td>
+                      <td>{{i.start_time}}</td>
+                      <td>{{i.end_time}}</td>
+                      <td>{{i.s_id}}</td>
+                      <td>
+                        <!-- Button to trigger modal -->
+                        <a href="#editTimetableModal-{{ forloop.counter }}" class="edit" data-bs-toggle="modal"><span class="material-symbols-outlined" data-bs-toggle="tooltip" title="Edit">edit</span></a>
+                      </td>
+                      <td><a href="timetable_delete/{{i.tt_id}}" class="btn btn-danger">delete</a></td>
+                   </tr>
+                   <!-- Modal -->
+                   <div id="editTimetableModal-{{ forloop.counter }}" class="modal fade">
+                      <div class="modal-dialog">
+                         <div class="modal-content">
+                            <form action="{% url 'edittimetable' i.tt_id %}" method="post">
+                               {% csrf_token %}
+                               <div class="modal-header">
+                                  <h4 class="modal-title">Edit Timetable</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body">
+                                  <!-- Standard Id -->
+                                  {% comment %} <div class="form-group mb-3">
+                                     <label for="editStandardId-{{ forloop.counter }}" class="form-label">Standard Id</label>
+                                     <input value="{{ i.sta_id }}" name="standard_id" type="text" class="form-control" id="editStandardId-{{ forloop.counter }}" required />
+                                  </div>
+                                  <!-- Faculty Id -->
+                                  <div class="form-group mb-3">
+                                     <label for="editFacultyId-{{ forloop.counter }}" class="form-label">Faculty Id</label>
+                                     <input value="{{ i.f_id }}" name="faculty_id" type="text" class="form-control" id="editFacultyId-{{ forloop.counter }}" required />
+                                  </div>
+                                  <!-- Subject Id -->
+                                  <div class="form-group mb-3">
+                                     <label for="editSubjectId-{{ forloop.counter }}" class="form-label">Subject Id</label>
+                                     <input value="{{ i.sub_id }}" name="subject_id" type="text" class="form-control" id="editSubjectId-{{ forloop.counter }}" required />
+                                  </div> {% endcomment %}
+                                  <!-- Day Of Week -->
+                                  <div class="form-group mb-3">
+                                     <label for="editDayOfWeek-{{ forloop.counter }}" class="form-label">Day Of Week</label>
+                                     <input value="{{ i.day_of_week }}" name="day_of_week" type="text" class="form-control" id="editDayOfWeek-{{ forloop.counter }}" required />
+                                  </div>
+                                  <!-- Start Time -->
+                                  <div class="form-group mb-3">
+                                     <label for="editStartTime-{{ forloop.counter }}" class="form-label">Start Time</label>
+                                     <input value="{{ i.start_time }}" name="start_time" type="time" class="form-control" id="editStartTime-{{ forloop.counter }}" required />
+                                  </div>
+                                  <!-- End Time -->
+                                  <div class="form-group mb-3">
+                                     <label for="editEndTime-{{ forloop.counter }}" class="form-label">End Time</label>
+                                     <input value="{{ i.end_time }}" name="end_time" type="time" class="form-control" id="editEndTime-{{ forloop.counter }}" required />
+                                  </div>
+                               </div>
+                               <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                  <button type="submit" class="btn btn-info">Update</button>
+                               </div>
+                            </form>
+                         </div>
+                      </div>
+                   </div>
+                   <!-- End Modal -->
+                   {% endfor %}
+                </tbody>
+             </table>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- end table section -->
+{% endblock %}

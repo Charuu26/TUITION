@@ -1,0 +1,166 @@
+  * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+  }
+
+  .main-sec {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100vh;
+  }
+
+  .main-sec .left {
+     width: 50%;
+     padding: 0 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .main-sec .left img {
+     width: 500px;
+     height: 450px;
+     mix-blend-mode: multiply;
+  }
+
+  .main-sec .left h1 {
+     font-size: 2.5rem;
+     font-family: 'Dancing Script', cursive;
+     margin: 20px 0;
+  }
+
+  .main-sec .left p {
+     font-size: 1.2rem;
+     text-align: center;
+     font-family: 'Poppins', sans-serif;
+  }
+
+  .main-sec .right {
+     width: 50%;
+     padding: 0 50px;
+     display: flex;
+     height: 100vh;
+     background-color: #fafffb;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .main-sec .right .logo {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .main-sec .right .logo h1 {
+     font-size: 3rem;
+     font-family: 'Dancing Script', cursive;
+  }
+
+  .main-sec .right .logo h1::after {
+     content: '';
+     display: block;
+     width: 60px;
+     height: 2px;
+     background-color: #4CAF50;
+     margin: 10px auto;
+  }
+
+
+  .container-fluid {
+     background-color: #e6feed;
+  }
+
+  .mastery-hub-form {
+     font-family: Arial, sans-serif;
+     width: 400px;
+     border-radius: 5px;
+  }
+
+  .mastery-hub-form label {
+     display: block;
+     margin-top: 10px;
+  }
+
+  .mastery-hub-form input[type="text"],
+  .mastery-hub-form input[type="password"] {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+  }
+
+  .mastery-hub-form button {
+     background-color: #4CAF50;
+     color: white;
+     width: 100%;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-top: 10px;
+  }
+
+  .mastery-hub-form button:hover {
+     background-color: #45a049;
+  }
+
+  .mastery-hub-form p {
+     text-align: right;
+     margin-top: 10px;
+  }
+
+  a {
+     color: #4CAF50;
+     text-decoration: none;
+  }
+
+  .show-password {
+     display: flex;
+     align-items: center;
+  }
+
+  .show-password input[type="checkbox"] {
+     margin: 0;
+     padding: 0;
+     vertical-align: middle;
+  }
+
+  .show-password label {
+     margin: 0;
+     margin-left: 5px;
+     padding: 0;
+     vertical-align: middle;
+  }
+
+  .toast {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     z-index: 9999;
+  }
+
+  @media screen and (max-width: 768px) {
+     .main-sec {
+        flex-direction: column;
+     }
+
+     .main-sec .left,
+     .main-sec .right {
+        width: 100%;
+        padding: 20px;
+     }
+
+     .main-sec .left img {
+        width: 100%;
+        height: auto;
+     }
+
+     .mastery-hub-form {
+        width: 100%;
+     }
+  }
